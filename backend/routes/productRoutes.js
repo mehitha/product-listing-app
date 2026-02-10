@@ -3,7 +3,7 @@ const Product = require("../models/Product");
 
 const router = express.Router();
 
-// POST /products - Add product
+
 router.post("/products", async (req, res) => {
   try {
     const { name, price, category, image } = req.body;
@@ -27,7 +27,7 @@ router.post("/products", async (req, res) => {
 });
 
 
-// GET /products - Get all products
+
 router.get("/products", async (req, res) => {
   try {
     const products = await Product.find();
@@ -38,3 +38,13 @@ router.get("/products", async (req, res) => {
 });
 
 module.exports = router;
+
+
+
+
+
+
+
+
+
+
