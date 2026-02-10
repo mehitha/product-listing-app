@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000";
+// const API_URL = "http://localhost:5000";
+const API_URL = "https://product-listing-app-ierb.onrender.com";
 
 export const getProducts = () => {
   return axios.get(`${API_URL}/products`);
