@@ -4,7 +4,10 @@ import axios from "axios";
 // const API_URL = "http://localhost:5000";
 // const API_URL = "https://product-listing-app-1-utjy.onrender.com";
 // const API_URL = "https://product-listing-tixc.onrender.com";
+
+// const API_URL = "http://localhost:5000/api";
 const API_URL = "https://product-listing-tixc.onrender.com/api";
+
 
 axios.get(`${API_URL}/products`);
 
