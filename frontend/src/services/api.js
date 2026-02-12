@@ -20,6 +20,26 @@ export const getProducts = () => {
 export const addProduct = (product) => {
   return axios.post(`${API_URL}/products`, product);
 };
+export const getAIRecommendations = async (productId) => {
+    const response = await fetch(`/api/ai/recommendations/${productId}`);
+    return await response.json();
+};
+
+// Smart Search
+export const smartSearch = async (query) => {
+    const response = await fetch('/api/ai/smart-search', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query })
+    });
+    return await response.json();
+};
+
+// Trending Products
+export const getTrendingProducts = async () => {
+    const response = await fetch('/api/ai/trending');
+    return await response.json();
+};
 
 
 

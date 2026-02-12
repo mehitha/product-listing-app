@@ -4,11 +4,13 @@ const cors = require("cors");
 const productRoutes = require("./routes/productRoutes");
 
 const app = express();
+// const aiRoutes = require('./routes/aiRoutes');
 
 app.use(cors());
 app.use(express.json());
 // app.use(productRoutes);
 app.use("/api", productRoutes);
+// app.use('/api/ai', aiRoutes);
 
 
 // mongoose.connect("mongodb://127.0.0.1:27017/productdb")
